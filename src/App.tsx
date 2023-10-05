@@ -1,6 +1,16 @@
+import ContactsList from "./containers/ContactsList";
+import Search from "./components/Search";
+import GlobalStyles, { Container } from "./styles";
+
 function App() {
   return (
-    <h1>Olá, mundo</h1>
+    <>
+    <GlobalStyles />
+    <Container>
+      <Search />
+      <ContactsList />
+    </Container>
+    </>
   );
 }
 
