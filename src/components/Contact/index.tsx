@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Button, ButtonsWrapper, ContactStyle, ContactWrapper, RemoveButton, SaveButton } from "./styles"
+import { Button, ButtonsWrapper, CancelButton, ContactStyle, ContactWrapper, RemoveButton, SaveButton } from "./styles"
 
 
 const Contact = () => {
@@ -14,7 +14,7 @@ const Contact = () => {
         {estaEditando ? (
           <>
             <SaveButton onClick={() => setEstaEditando(false)} type="button">Salvar</SaveButton>
-            <RemoveButton onClick={() => setEstaEditando(false)} type="button">Cancelar</RemoveButton>
+            <CancelButton onClick={() => setEstaEditando(false)} type="button">Cancelar</CancelButton>
           </>
         ) : (
           <>

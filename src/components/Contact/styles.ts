@@ -33,6 +33,9 @@ export const Button = styled.button`
 export const RemoveButton =  styled(Button)`
   background-color: #e74c3c;
 `
+export const CancelButton = styled(Button)`
+  background-color: #f39c12;
+`
 
 export const SaveButton = styled(Button)`
   background-color: #27ae60;
