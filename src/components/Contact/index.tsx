@@ -33,8 +33,6 @@ const Contact = ({ name: originalName, email: originalEmail, tel: originalTel }:
     }
   }, [originalName, originalEmail, originalTel])
 
-  const telRegEx = tel.replace(/(\d{2})(\d{5})(\d{3})/, '($1) $2-$3')
-
   const cancelarEditar = () => {
     setIsEditing(false)
     setName(originalName)

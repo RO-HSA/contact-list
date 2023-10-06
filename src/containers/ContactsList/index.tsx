@@ -5,7 +5,6 @@ import { RootReducer } from "../../store"
 
 const ContactsList = () => {
   const { items } = useSelector((state: RootReducer) => state.contacts)
-
   return (
     <Wrapper>
       <HeaderWrapper>
