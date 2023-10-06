@@ -10,8 +10,20 @@ export const ContactWrapper = styled.ul`
   align-items: center;
 `
 
-export const ContactStyle = styled.li`
+export const ContactStyle = styled.input`
   color: var(--secondaryColor);
+  font-size: 1em;
+  width: 95%;
+  border: none;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+  transition: background-color, 0.2s ease-in-out;
+
+  &:disabled {
+    color: var(--secondaryColor);
+    background-color: #fff;
+    border: none;
+  }
 `
 
 export const ButtonsWrapper = styled.li`

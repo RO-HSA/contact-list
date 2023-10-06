@@ -20,9 +20,7 @@ const Form = () => {
     event.preventDefault()
 
     dispath(add({ name, email, tel }))
-
     navigate('/')
-
   }
 
   return (
