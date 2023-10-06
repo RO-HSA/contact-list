@@ -1,5 +1,10 @@
 import { useState } from "react"
-import { Button, ButtonsWrapper, CancelButton, ContactStyle, ContactWrapper, RemoveButton, SaveButton } from "./styles"
+import { ButtonsWrapper,ContactWrapper, ContactStyle } from "./styles"
+import { Button, CancelButton, RemoveButton, SaveButton } from "../../styles"
+
+type Props = {
+
+}
 
 
 const Contact = () => {
@@ -22,7 +27,6 @@ const Contact = () => {
             <RemoveButton type="button">Remover</RemoveButton>
           </>
         )}
-
       </ButtonsWrapper>
     </ContactWrapper>
 

@@ -21,4 +21,27 @@ export const Container = styled.div`
   width: 100%;
 `
 
+export const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+  width: 64px;
+  background-color: var(--primaryColor);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+`
+
+export const RemoveButton =  styled(Button)`
+  background-color: #e74c3c;
+`
+export const CancelButton = styled(Button)`
+  background-color: #f39c12;
+`
+
+export const SaveButton = styled(Button)`
+  background-color: #27ae60;
+`
+
 export default GlobalStyles
