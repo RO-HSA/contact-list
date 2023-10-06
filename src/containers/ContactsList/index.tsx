@@ -5,6 +5,25 @@ import { RootReducer } from "../../store"
 
 const ContactsList = () => {
   const { items } = useSelector((state: RootReducer) => state.contacts)
+  const { term } = useSelector(
+    (state: RootReducer) => state.filter
+  )
+
+  const filterContacts = () => {
+    let filteredContacts = items
+
+    if (term !== undefined) {
+      filteredContacts = filteredContacts.filter(
+        (item) => item.name.toLowerCase().search(term.toLowerCase()) >= 0
+      )
+      return filteredContacts
+    } else {
+      return items
+    }
+  }
+
+  const contacts = filterContacts()
+
   return (
     <Wrapper>
       <HeaderWrapper>
@@ -12,7 +31,7 @@ const ContactsList = () => {
         <Header>E-mail</Header>
         <Header>Telefone</Header>
       </HeaderWrapper>
-      {items.map((item) => (
+      {contacts.map((item) => (
       <Contact key={item.tel} name={item.name} email={item.email} tel={item.tel} />
       ))}
     </Wrapper>

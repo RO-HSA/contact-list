@@ -7,12 +7,10 @@ import { ButtonsWrapper } from "../../components/Contact/styles"
 import { CancelButton, SaveButton } from "../../styles"
 import { BackButton, FormStyle, InputField } from "./styles"
 import { add } from "../../store/reducers/contacts";
-import { RootReducer } from "../../store";
 
 const Form = () => {
   const navigate = useNavigate()
   const dispath = useDispatch()
-  const contactAddedSuccessfully = useSelector((state: RootReducer) => state.contacts.addedSuccessfully)
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -22,9 +20,7 @@ const Form = () => {
     event.preventDefault()
 
     dispath(add({ name, email, tel }))
-    if (contactAddedSuccessfully) {
-      navigate('/')
-    }
+    navigate('/')
   }
 
   return (

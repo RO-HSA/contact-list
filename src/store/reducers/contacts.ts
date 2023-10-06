@@ -3,12 +3,10 @@ import { Contact } from "../../App";
 
 type ContactState = {
   items: Contact[],
-  addedSuccessfully: boolean
 }
 
 const initialState: ContactState = {
   items: JSON.parse(localStorage.getItem('data') || '[]'),
-  addedSuccessfully: false
 }
 
 const setLocalStorage = (state: ContactState) => {
@@ -22,12 +20,10 @@ const contactsSlice = createSlice({
     add: (state, action: PayloadAction<Contact>) => {
       const contactPayload = action.payload
 
-      if (state.items.find((contact) => contact.name.toLowerCase().split(' ').join() === contactPayload.name.toLowerCase().split(' ').join())) {
+      if (state.items.find((contact) => contact.name.toLowerCase().replace(/\s+/g, '') === contactPayload.name.toLowerCase().replace(/\s+/g, ''))) {
         alert("Contato já adicionado")
-        state.addedSuccessfully = false
       } else {
         state.items.push(contactPayload)
-        state.addedSuccessfully = true
       }
       setLocalStorage(state)
     },
