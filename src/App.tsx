@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 import NewContact from "./pages/NewContact";
 
 export type Contact = {
-  id: number
   name: string
   email: string
   tel: string
